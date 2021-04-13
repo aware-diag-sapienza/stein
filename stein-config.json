@@ -1,0 +1,122 @@
+{
+  "stein": "This is a Stein configuration file",
+  "steinVersion": 7,
+  "creation": "20180605-221136",
+  "export": "20180605-221539",
+  "systemUrl": "../colorbrewer",
+  "uploadUrl": "",
+  "title": "",
+  "description": "",
+  "lastEditedFileName": "",
+  "dataTypes": [
+    {
+      "name": "undefined",
+      "toStringFunction": "(function(d){var result = d.toString();/*body-start*//*body-end*/;return result;})"
+    },
+    {
+      "name": "num-classes",
+      "toStringFunction": "(function(d){var result = d.toString();/*body-start*//*body-end*/;return result;})"
+    },
+    {
+      "name": "ramp",
+      "toStringFunction": "(function(d){var result = d.toString();/*body-start*//*body-end*/;return result;})"
+    },
+    {
+      "name": "scheme-type",
+      "toStringFunction": "(function(d){var result = d.toString();/*body-start*//*body-end*/;return result;})"
+    }
+  ],
+  "events": [
+    {
+      "type": "change",
+      "name": "change-on-blindcheck",
+      "dataType": "undefined",
+      "contributeToAnswer": "Yes",
+      "specializeEvent": "(function(event){if(event.type != 'change') return false;var result = false;if(event.targetId == 'blindcheck') result = true;;return result;})",
+      "traceData": "(function(event){var result = null;if(event.targetId != '') result = event.targetId;\nelse if(event.targetClass != '') result = event.targetClass;\nelse if(event.parentId != '') result = event.parentId;\nelse if(event.parentClass != '') result = event.parentClass;\nelse result = event.targetId;;return result;})",
+      "generator": "change/INPUT/blindcheck/"
+    },
+    {
+      "type": "change",
+      "name": "change-on-num-classes",
+      "dataType": "num-classes",
+      "contributeToAnswer": "Yes",
+      "specializeEvent": "(function(event){if(event.type != 'change') return false;var result = false;if(event.targetId == 'num-classes') result = true;;return result;})",
+      "traceData": "(function(event){var result = null;if(event.targetId != '') result = event.targetId;\nelse if(event.targetClass != '') result = event.targetClass;\nelse if(event.parentId != '') result = event.parentId;\nelse if(event.parentClass != '') result = event.parentClass;\nelse result = event.eventDatum.value;;return result;})",
+      "generator": "change/SELECT/num-classes/"
+    },
+    {
+      "type": "change",
+      "name": "change-on-scheme-type",
+      "dataType": "scheme-type",
+      "contributeToAnswer": "Yes",
+      "specializeEvent": "(function(event){if(event.type != 'change') return false;var result = false;if(event.targetClass.split('.').includes('scheme-type')) result = true;;return result;})",
+      "traceData": "(function(event){var result = null;if(event.targetId != '') result = event.targetId;\nelse if(event.targetClass != '') result = event.targetClass;\nelse if(event.parentId != '') result = event.parentId;\nelse if(event.parentClass != '') result = event.parentClass;\nelse result = event.targetId;;return result;})",
+      "generator": "change/INPUT/sequential/scheme-type"
+    },
+    {
+      "type": "click",
+      "name": "click-on-ramp",
+      "dataType": "ramp",
+      "contributeToAnswer": "Yes",
+      "specializeEvent": "(function(event){if(event.type != 'click') return false;var result = false;if(event.parentClass.split('.').includes('ramp')) result = true;;return result;})",
+      "traceData": "(function(event){var result = null;if(event.targetId != '') result = event.targetId;\nelse if(event.targetClass != '') result = event.targetClass;\nelse if(event.parentId != '') result = event.parentId;\nelse if(event.parentClass != '') result = event.parentClass;\nelse result = event.target;;return result;})",
+      "generator": "click/rect//"
+    }
+  ],
+  "initialQuestions": [
+    {
+      "id": 1,
+      "text": "What is your age ?",
+      "responseType": "multiple-choice",
+      "options": [
+        "Under 18",
+        "18-24",
+        "25-34",
+        "35-44",
+        "45-54",
+        "More than 54"
+      ],
+      "images": [],
+      "mandatory": true
+    }
+  ],
+  "systemQuestions": [
+    {
+      "id": 1,
+      "text": "Select a scale",
+      "responseType": "user-interaction-exclusive-list",
+      "options": [],
+      "images": [],
+      "dataType": "ramp",
+      "beforeFunction": "(function(){/*body-start*//*Call this function to notify to Stein that the system is loaded.*/\nif(SteinLib) SteinLib.systemLoaded();/*body-end*/;})",
+      "afterFunction": "(function(){/*body-start*//*body-end*/;})",
+      "mandatory": true,
+      "trackMouse": false,
+      "trackMouseInterval": 200
+    },
+    {
+      "id": 2,
+      "text": "Select two blindsafe scales",
+      "responseType": "auto-computed-list",
+      "options": [],
+      "images": [],
+      "dataType": "ramp",
+      "beforeFunction": "(function(){/*body-start*//*Call this function to notify to Stein that the system is loaded.*/\nif(SteinLib) SteinLib.systemLoaded();/*body-end*/;})",
+      "afterFunction": "(function(){/*body-start*//*body-end*/;})",
+      "mandatory": true,
+      "trackMouse": false,
+      "trackMouseInterval": 200
+    }
+  ],
+  "finalQuestions": [
+    {
+      "id": 1,
+      "text": "Please provide us additional comments if you have any.",
+      "responseType": "large-text",
+      "options": [],
+      "images": [],
+      "mandatory": true
+    }
+  ]
+}
