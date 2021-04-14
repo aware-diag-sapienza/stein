@@ -316,7 +316,7 @@ window.Stein = new class{
         this.highLevelEventTimestamp = {};
         this.events = {};
         
-        this.configFileName = "stein-config.json";
+        this.configFileName = "stein-config.json?q=" + Date.now(); //random number to bypass cache
         this.design = undefined;
         this.evaluation = undefined;
         this.test = undefined;
