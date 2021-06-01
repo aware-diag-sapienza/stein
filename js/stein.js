@@ -6,7 +6,7 @@
     filename
 *
 */
-var serverUploadUrl = "save.jsp";
+var serverUploadUrl = "save.php";
 /*
 *
 *
@@ -1072,7 +1072,7 @@ window.Stein = new class{
                 $("#modal-system-url").modal("show"); 
             }
             else{
-                let url = window.prompt("Insert url of the system:", "../colorbrewer");
+                let url = window.prompt("Insert url of the system:", "./system");
                 if (url != null && url != ""){
                     _this.data.systemUrl = url;
                     _this.data.creation = _this._getCurrentCompactDateTime();
