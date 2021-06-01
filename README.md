@@ -1,5 +1,22 @@
-# stein
+# STEIN
+Marco Angelini, Graziano Blasilli, Simone Lenti, Giuseppe Santucci:
 STEIN: speeding up evaluation activities with a Seamless Testing Environment INtegrator.
+https://doi.org/10.2312/eurovisshort.20181083
+
+```
+@inproceedings {eurovisshort.20181083,
+booktitle = {EuroVis 2018 - Short Papers},
+editor = {Jimmy Johansson and Filip Sadlo and Tobias Schreck},
+title = {{STEIN: Speeding up Evaluation Activities With a Seamless Testing Environment INtegrator}},
+author = {Angelini, Marco and Blasilli, Graziano and Lenti, Simone and Santucci, Giuseppe},
+year = {2018},
+publisher = {The Eurographics Association},
+ISBN = {978-3-03868-060-4},
+DOI = {10.2312/eurovisshort.20181083}
+}
+```
+
+# How to run STEIN
 
 Stein works under a web server. ```server.py``` is a simple python server to run it, but for result upload capiability it requires a webserver wirh php. You can use your custom server, but you have to implement the uploading logic used in ```save.php```. And change ```js/stein.js``` the pointer ```var serverUploadUrl = "save.php";``` to the script. 
 
